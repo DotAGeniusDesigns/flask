@@ -1,0 +1,36 @@
+.row {
+    display: flex;
+}
+.cell {
+    padding: 10px;
+    border: 1px solid #000;
+    margin: 2px;
+    text-align: center;
+    width: 20px;
+    cursor: pointer; /* Optional: Makes it look clickable */
+}
+
+.non-board-text {
+    font-family: 'Arial', sans-serif;
+    color: #2196F3;
+    text-shadow: 1px 1px #000;
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Additional styling for specific texts */
+#timer, #score {
+    font-weight: bold;
+    font-size: 20px;
+    color: #4CAF50;
+}
+
+#high-score, #num-plays {
+    color: #FFC107;
+    font-size: 20px;
+}
+
+#result {
+    color: blue;
+    font-size: 20px;
+}

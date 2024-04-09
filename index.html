@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Boggle Game</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>Boggle Game</h1>
+    <div class="non-board-text" id="timer">Timer: <span>60 seconds remaining</span></div>
+    <div class="non-board-text" id="score">Score: <span>0</span></div>
+    <div class="non-board-text" id="high-score">High Score: 0</div>
+    <div class="non-board-text" id="num-plays">Number of Plays: 0</div>
+    <button id="play-again" style="display: none;">Play Again</button>
+    <div id="board">
+        {% for row in board %}
+            <div class="row">
+                {% for letter in row %}
+                    <div class="cell">{{ letter }}</div>
+                {% endfor %}
+            </div>
+        {% endfor %}
+    </div>
+    <form id="guess-form">
+        <input type="text" name="guess" placeholder="Enter your guess">
+        <button type="submit">Submit Guess</button>
+    </form>
+    <div id="result"></div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
